@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/rmitastepsd_white.png" width=600>
+  <img src="assets/rmitastepsd_white.png" width=200 height=300>
 </p>
 
 #
