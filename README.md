@@ -11,6 +11,7 @@
  RmiTaste was written to aid security professionals in identifying insecure RMI services on systems which the user has prior permission to attack. Unauthorised access to computer systems is illegal and RmiTaste must be used in accordance with all relevant laws. Failure to do so could lead to you being prosecuted. The developers of RmiTaste assume no liability and are not responsible for any misuse or damage caused by this program.
 
 ## Building and Running
+ Requires openjdk 11.0.3.
  1. Download ysoserial-master-SNAPSHOT.jar and save it in libs_attack directory (https://github.com/frohoff/ysoserial).
  2. Build project using maven:
     ```bash
@@ -178,3 +179,4 @@ Demo server is available <a href="https://github.com/STMSolutions/RmiServerExamp
 
 ## Author
 Twitter: <a href="https://twitter.com/_mzer0">@_mzer0</a>
+Inspired by: <a href="https://github.com/NickstaDB/BaRMIe.git">BaRMIe</a> and  <a href="https://twitter.com/h0ng10">@h0ng10</a> <a href="https://mogwailabs.de/blog/2019/03/attacking-java-rmi-services-after-jep-290/">article</a>
