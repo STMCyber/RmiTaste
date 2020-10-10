@@ -1,7 +1,6 @@
 package m0.rmitaste.rmi;
 
 import m0.rmitaste.rmi.serialization.RmiObjectParser;
-import m0.rmitaste.utils.RMIReplyDataParser;
 import m0.rmitaste.utils.SimpleLogger;
 import sun.rmi.registry.RegistryImpl_Stub;
 import sun.rmi.transport.StreamRemoteCall;
@@ -141,7 +140,6 @@ public class RmiRegistry implements Serializable {
      * @throws Exception
      */
     private RmiObject lookup(String name) throws java.rmi.MarshalException, Exception{
-        RMIReplyDataParser parser = new RMIReplyDataParser();
         RmiObject ro = null;
         // Cast Registry to RegistryImpl_Stub
         RegistryImpl_Stub reg = (RegistryImpl_Stub) this.reference;
@@ -200,7 +198,6 @@ public class RmiRegistry implements Serializable {
                 packetBytes.add(b);
             }
             // Parse serialized object
-            //ro = parser.extractObjectDetails(name, packetBytes);
 
             RmiObjectParser rmiObjectParser = new RmiObjectParser(name);
             rmiObjectParser.loadStream(packetBytes);
